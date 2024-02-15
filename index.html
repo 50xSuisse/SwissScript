@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://50xSuisse.github.io/images/favicon.ico" />
+    <title>SwissScript.js</title>
+    <!-- Include CodeMirror CSS and JS files -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/mode/javascript/javascript.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      img {
+        width: 48px; /* Increased the size of the Swiss flag */
+        height: auto;
+        margin-right: 2px;
+        border-radius: 50%;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin: 0;
+      }
+
+      #editor {
+        width: 80%;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .button-bar {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #333;
+      }
+
+      #console {
+        display: none;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        font-family: "Courier New", Courier, monospace;
+        overflow: auto;
+        margin-top: 10px;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-top: 1px solid #ddd;
+        position: fixed;
+        bottom: 0;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-note {
+        font-size: 0.8rem;
+        color: #ccc;
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+
+      .icon {
+        font-size: 14px;
+        margin-right: 4.2px;
+        color: #ccc;
+      }
+
+      .swiss-flag-small {
+        width: 21.5px;
+        height: auto;
+        margin-right: 2px;
+        border-radius: 50%;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .file-upload {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        margin: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .file-upload:hover {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg"
+        alt="Swiss Flag"
+      />
+      <h1>SwissScript.js</h1>
+    </header>
+
+    <div id="editor"></div>
+    <div class="button-bar">
+      <button
+        class="file-upload"
+        onclick="document.getElementById('fileInput').click()"
+      >
+        Importer
+      </button>
+      <button onclick="runCode()">Exécuter</button>
+      <button class="file-upload" onclick="saveCode()">Enregistrer</button>
+    </div>
+    <input type="file" id="fileInput" accept=".js" onchange="loadFile()" />
+
+    <div id="console"></div>
+
+    <footer>
+      <div>
+        <a href="https://50xSuisse.github.io" class="footer-note">
+          <img
+            class="swiss-flag-small"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg"
+            alt="Swiss Flag"
+          />
+          50xSuisse | Software. Swiss-Made for the World.
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://developer.mozilla.org/docs/Web/JavaScript"
+          class="footer-note"
+        >
+          <i class="devicon-javascript-plain icon"></i>Powered by JavaScript
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize CodeMirror editor
+      var editor = CodeMirror(document.getElementById("editor"), {
+        value: "// SwissScript.js is a JavaScript playground by 50xSuisse.",
+        mode: "javascript",
+        lineNumbers: true,
+        theme: "default",
+      });
+
+      function runCode() {
+        try {
+          // Get the code from the editor
+          var code = editor.getValue();
+
+          // Toggle console visibility
+          document.getElementById("console").style.display = "block";
+
+          // Clear the console
+          document.getElementById("console").innerHTML = "";
+
+          // Redirect console.log to our custom function to display output
+          var log = console.log;
+          console.log = function (message) {
+            document.getElementById("console").innerHTML += message + "<br>";
+            log.apply(console, arguments);
+          };
+
+          // Evaluate and run the code
+          eval(code);
+
+          // Restore the original console.log
+          console.log = log;
+        } catch (error) {
+          console.error("Error:", error.message);
+          document.getElementById("console").innerHTML +=
+            '<span style="color: red;">Error: ' + error.message + "</span><br>";
+        }
+      }
+
+      function loadFile() {
+        var fileInput = document.getElementById("fileInput");
+        var file = fileInput.files[0];
+
+        if (file) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            editor.setValue(e.target.result);
+          };
+          reader.readAsText(file);
+        }
+      }
+
+      function saveCode() {
+        var code = editor.getValue();
+        var blob = new Blob([code], { type: "text/javascript" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "SwissScript.js";
+        a.click();
+      }
+    </script>
+  </body>
+</html>
