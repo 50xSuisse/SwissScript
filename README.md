@@ -1,8 +1,10 @@
 # SwissScript.js
+
 ### A JavaScript playground by 50xSuisse.
+
 <br>
 
-![SwissScript.js](https://i.imgur.com/08YaakQ.png)
+![SwissScript.js](https://github.com/50xSuisse/SwissScript.js/assets/156722656/1e460aab-a5a4-48bd-9c5a-ef2837d59366)
 
 ## Features
 
