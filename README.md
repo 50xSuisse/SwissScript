@@ -4,7 +4,8 @@
 
 <br>
 
-![SwissScript.js](https://github.com/50xSuisse/SwissScript.js/assets/156722656/1e460aab-a5a4-48bd-9c5a-ef2837d59366)
+![SwissScript.js](https://github.com/50xSuisse/SwissScript.js/assets/156722656/952b1b4a-2b19-487f-bd55-57b01bd5ff9c)
+
 
 ## Features
 
