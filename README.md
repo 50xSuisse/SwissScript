@@ -1,6 +1,6 @@
 # SwissScript.js
 
-### A JavaScript playground by 50xSuisse.
+### A simple beginner-friendly JavaScript playground by 50xSuisse.
 
 <br>
 
