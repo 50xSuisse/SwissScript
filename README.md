@@ -3,7 +3,7 @@
 <h3 align="center">A simple beginner-friendly JavaScript playground by 50xSuisse.</h3>
 
 <p align="center">
-  <img src="https://github.com/50xSuisse/SwissScript.js/assets/156722656/952b1b4a-2b19-487f-bd55-57b01bd5ff9c" alt="SwissScript.js">
+  <img src="https://github.com/50xSuisse/SwissScript/assets/156722656/1af67b50-9a2f-43e6-b0ab-7b77fa9d9939" alt="SwissScript.js">
 </p>
 
 ## Features
