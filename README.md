@@ -1,4 +1,4 @@
-<h1 align="center">SwissScript.js</h1>
+<h1 align="center">SwissScript</h1>
 
 <h3 align="center">A simple beginner-friendly JavaScript playground by 50xSuisse.</h3>
 
