@@ -33,7 +33,7 @@
 ---
 
 <h5 align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="42.8px" height="auto">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="39.50px" height="auto">
   <br>
   Software. Swiss-Made for the World. | Crafted with Precision by 50xSuisse.
 </h5>
