@@ -1,7 +1,6 @@
 <h1 align="center">SwissScript</h1>
 
 <h3 align="center">A simple beginner-friendly JavaScript playground by 50xSuisse.</h3>
-<h5 align="center">Live at Swiss.js.org</h5>
 
 <a href="https://Swiss.js.org">
   <p align="center">
@@ -25,7 +24,7 @@ Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to s
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/50xSuisse/SwissScript.js.git
+    git clone https://github.com/50xSuisse/SwissScript.git
     ```
 
 2. Open `index.html` in your web browser and SwissScript away!
@@ -39,7 +38,9 @@ Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to s
 ---
 
 <div align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="39.50px" height="auto">
+  <a href="https://50xSuisse.github.io">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="39.50px" height="auto">
+  </a>
   <br>
   <small>Software. Swiss-Made for the World. | Crafted with Precision by 50xSuisse.</small>
 </div>
