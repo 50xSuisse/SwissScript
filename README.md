@@ -1,10 +1,13 @@
 <h1 align="center">SwissScript</h1>
 
 <h3 align="center">A simple beginner-friendly JavaScript playground by 50xSuisse.</h3>
+<h5 align="center">Live at Swiss.js.org</h5>
 
-<p align="center">
-  <img src="https://github.com/50xSuisse/SwissScript/assets/156722656/1af67b50-9a2f-43e6-b0ab-7b77fa9d9939" alt="SwissScript.js">
-</p>
+<a href="https://Swiss.js.org">
+  <p align="center">
+    <img src="https://github.com/50xSuisse/SwissScript/assets/156722656/1af67b50-9a2f-43e6-b0ab-7b77fa9d9939" alt="SwissScript.js">
+  </p>
+</a>
 
 ## Features
 
