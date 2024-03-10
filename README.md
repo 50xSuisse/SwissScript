@@ -1,6 +1,6 @@
 <h1 align="center">SwissScript</h1>
 
-<h3 align="center">A simple & beginner-friendly JavaScript playground by 50xSuisse.</h3>
+<h3 align="center">A simple & beginner-friendly JavaScript playground by 50⤬Suisseᐩ.</h3>
 
 <a href="https://Swiss.js.org">
   <p align="center">
@@ -42,5 +42,5 @@ Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to s
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="39.50px" height="auto">
   </a>
   <br>
-  <small>Software. Swiss-Made for the World. | Crafted with Precision by 50xSuisse.</small>
+  <small>Software. Swiss-Made for the World. | Crafted with Precision by 50⤬Suisseᐩ.</small>
 </div>
