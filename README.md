@@ -1,6 +1,6 @@
 <h1 align="center">SwissScript</h1>
 
-<h3 align="center">A simple beginner-friendly JavaScript playground by 50xSuisse.</h3>
+<h3 align="center">A simple & beginner-friendly JavaScript playground by 50xSuisse.</h3>
 
 <a href="https://Swiss.js.org">
   <p align="center">
@@ -12,7 +12,7 @@
 
 - Write and run JavaScript code in a user-friendly web-based editor.
 - Import and export your scripts seamlessly.
-- Experience the power of JavaScript with Swiss precision.
+- Experience the power of JavaScript with Swissᐩ precision.
 
 ## Getting Started
 
@@ -32,8 +32,8 @@ Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to s
 ## How to Use
 
 - **Importer:** Load a JavaScript file with a single click.
-- **Exécuter (Execute):** Run your JavaScript code and see the results.
-- **Enregistrer (Save):** Save your code as a file effortlessly.
+- **Exécuter:** Run your JavaScript code and see the results.
+- **Enregistrer:** Save your code as a file effortlessly.
 
 ---
 
