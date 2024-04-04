@@ -42,5 +42,5 @@ Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to s
     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg" alt="Swiss Flag" width="39.50px" height="auto">
   </a>
   <br>
-  <small>Software. Swiss-Made for the World. | Crafted with Precision by 50⤬Suisseᐩ.</small>
+  <small>Software. Swiss-Made for the World. | Crafted with Precision by 50⤬Suisseᐩ</small>
 </div>
