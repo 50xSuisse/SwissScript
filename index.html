@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="https://50xSuisse.github.io/favicon.ico"
-    />
+    <link rel="shortcut icon" href="https://50xSuisse.github.io/favicon.ico" />
     <title>SwissScript</title>
     <!-- Include CodeMirror CSS and JS files -->
     <link
@@ -194,33 +191,13 @@
       style="display: flex; align-items: center; justify-content: space-between"
     >
       <div>
-        <a href="https://50xSuisse.github.io" class="footer-note">
+        <a href="/" class="footer-note">
           <img
             class="swiss-flag-small"
             src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Twemoji12_1f1e8-1f1ed.svg"
             alt="Swiss Flag"
           />
           50⤬Suisseᐩ | Software. Swiss-Made for the World.
-        </a>
-      </div>
-      <div align="center" style="flex: 1; margin-right: 50px">
-        <a
-          href="https://github.com/50xSuisse/SwissScript"
-          style="
-            text-decoration: none;
-            color: #ccc;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          "
-        >
-          <i
-            class="devicon-github-plain icon"
-            style="font-size: 18px; color: #ccc"
-          ></i>
-          <span style="font-size: 9.5px; margin-top: 5px"
-            >50xSuisse/SwissScript</span
-          >
         </a>
       </div>
       <div>
@@ -242,6 +219,11 @@
         theme: "default",
       });
 
+      // Prevent print() from opening printer window
+      window.print = function () {
+        return false;
+      };
+
       function runCode() {
         try {
           // Get the code from the editor
@@ -253,18 +235,19 @@
           // Clear the console
           document.getElementById("console").innerHTML = "";
 
+          // Check if console.log is already overridden
+          if (!window.originalConsoleLog) {
+            window.originalConsoleLog = console.log;
+          }
+
           // Redirect console.log to our custom function to display output
-          var log = console.log;
           console.log = function (message) {
             document.getElementById("console").innerHTML += message + "<br>";
-            log.apply(console, arguments);
+            window.originalConsoleLog.apply(console, arguments);
           };
 
           // Evaluate and run the code
           eval(code);
-
-          // Restore the original console.log
-          console.log = log;
         } catch (error) {
           console.error("Error:", error.message);
           document.getElementById("console").innerHTML +=
