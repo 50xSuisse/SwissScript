@@ -18,7 +18,7 @@
 
 ### Option 1: Visit Swiss.js.org
 
-Simply open your web browser and visit [Swiss.js.org](https://Swiss.js.org) to start experimenting with JavaScript.
+Simply open your web browser, visit [Swiss.js.org](https://Swiss.js.org), and start experimenting with JavaScript.
 
 ### Option 2: Clone the repository
 
